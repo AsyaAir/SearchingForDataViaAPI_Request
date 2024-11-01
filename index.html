@@ -7,8 +7,39 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <div>
+            <p>Search The Star Wars Univers / Поиск по Вселенной Звездных Воин </p>
+        </div>
+    </header>
+    <main>
+        <div class="search_field">
+            <div class="form">
+                <form id="search_form">
+                    <div class="select">
+                        <select name="info" id="info_select">
+                            <option value="">Select a category/Выберите категорию</option>
+                            <option value="people">People/Люди</option>
+                            <option value="films">Films/Фильмы</option>
+                            <option value="starships">Starships/Корабли</option>
+                            <option value="planets">Planets/Планеты</option>
+                        </select>
+                    </div>
+                    <div class="number">
+                        <input type="number" id="id_input" min="1" max="10" placeholder="Enter ID (1-10)/Введите ID (1-10)" required>
+                    </div>
+                    <div>
+                        <button type="submit" class="search">Search/Поиск</button>
+                    </div>
+                </form>
+            </div>
+            <div class="info_result">
+                <div id="loading" style="display: none;">Идёт загрузка...</div>
+                <div id="result" class="info_result"></div>
+                <div id="error" class="error_result"></div>
+            </div>
+        </div>
+    </main>
     <footer>
         <p>by AsyaAir</p>
     </footer>
